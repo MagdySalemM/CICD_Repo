@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            ansible-playbook -i inventory.txt main.yml --private-key ubunto.pem     
+            ansible-playbook -i inventory.txt main.yml    
 workflows:
   my_workflow:
       jobs:
