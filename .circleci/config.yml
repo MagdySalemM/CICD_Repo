@@ -25,7 +25,7 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-          fingerprints: ["62:73:c0:77:18:2c:d3:0a:41:63:48:ea:aa:74:b6:62"] # You can get this ID in the section where you registered the SSH Key
+          fingerprints: ["62:73:c0:77:18:2c:d3:0a:41:63:48:ea:aa:74:b6:62"]
       - run:
           name: Install dependencies
           command: |
@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            ansible-playbook -i inventory.txt main.yml --private-key ubunto.pem
+            ansible-playbook -i inventory.txt main.yml
 workflows:
   my_workflow:
       jobs:
